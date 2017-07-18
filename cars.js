@@ -29,7 +29,7 @@ var rentals = [
 function availability() {
     for (var i = 0; i < rentals.length; i++ ) {
         if (rentals[i].total > 0) {
-            console.log("The " + rentals[i].model + " is available.");
+            console.log("There are " + rentals[i].total + rentals[i].model + " available.");
         } else {
             console.log("The " + rentals[i].model + " is unavailable");
         }
