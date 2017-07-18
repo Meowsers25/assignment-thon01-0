@@ -36,7 +36,16 @@ function availability() {
     }
 }
 
+function displayPrice() {
+    for (var i = 0; i < rentals.length; i++) {
+        if(rentals[i].total > 0) {
+            console.log("The price of " + rentals[i].model + " is " + rentals[i].price + " dollars.");
+        } 
+    }
+}
+
 availability();
+displayPrice();
 
 
  
