@@ -44,7 +44,15 @@ function displayPrice() {
     }
 }
 
-
+function rentMe(rentals.model) {
+    for(var i = model.total; i > 0; i--) {
+        if (model.total > 0) {
+            console.log("Congrats");
+        } else {
+            console.log("No");
+        }
+    }
+}
 
 availability();
 displayPrice();
