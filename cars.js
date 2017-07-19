@@ -6,8 +6,8 @@
 
 
 
-var rentals = {
-  cars: [{
+var rentals = [
+   {
         model: "sedan",
         price: 75,
         total: 10
@@ -21,41 +21,46 @@ var rentals = {
         model: "sports car",
         price: 125,
         total: 0
-    }]
+    },
     
-    
-};
-    
-function availability() {
-    for (var i = 0; i < rentals.length; i++ ) {
-        if (rentals[i].total > 0) {
-            console.log("There are " + rentals[i].total + " " + rentals[i].model + "s available.");
+];
+
+function rentMe(model) {
+    for(var i = 0; i < rentals.length; i++) {
+        if(model === rentals[i].model && rentals[i].total > 0) {
+            rentals[i].total = rentals[i].total - 1;
+            console.log("yes" + rentals[i].total);
         } else {
-            console.log("The " + rentals[i].model + " is unavailable");
+            console.log("x");
         }
     }
 }
 
-function displayPrice() {
-    for (var i = 0; i < rentals.length; i++) {
-        if(rentals[i].total > 0) {
-            console.log("The price of a " + rentals[i].model + " is " + rentals[i].price + " dollars.");
-        } 
-    }
-}
+rentMe("sports car");
+console.log()
 
-function rentMe(rentals.model) {
-    for(var i = model.total; i > 0; i--) {
-        if (model.total > 0) {
-            console.log("Congrats");
-        } else {
-            console.log("No");
-        }
-    }
-}
+    
+// function availability() {
+//     for (var i = 0; i < rentals.length; i++ ) {
+//         if (rentals[i].total > 0) {
+//             console.log("There are " + rentals[i].total + " " + rentals[i].model + "s available.");
+//         } else {
+//             console.log("The " + rentals[i].model + " is unavailable");
+//         }
+//     }
+// }
 
-availability();
-displayPrice();
+// function displayPrice() {
+//     for (var i = 0; i < rentals.length; i++) {
+//         if(rentals[i].total > 0) {
+//             console.log("The price of a " + rentals[i].model + " is " + rentals[i].price + " dollars.");
+//         } 
+//     }
+// }
+
+
+//availability();
+//displayPrice();
 
 
  
