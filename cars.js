@@ -2,7 +2,7 @@
 // rental price for each
 //available or not
 //total available for each category
-//ability to submit a rental request
+
 
 
 
