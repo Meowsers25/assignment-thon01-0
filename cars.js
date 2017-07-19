@@ -6,8 +6,8 @@
 
 
 
-var rentals = [
-   {
+var rentals = {
+  cars: [{
         model: "sedan",
         price: 75,
         total: 10
@@ -21,10 +21,10 @@ var rentals = [
         model: "sports car",
         price: 125,
         total: 0
-    }
+    }]
     
     
-];
+};
     
 function availability() {
     for (var i = 0; i < rentals.length; i++ ) {
