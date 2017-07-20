@@ -21,27 +21,22 @@ var rentals = [
         model: "sports car",
         price: 125,
         total: 0
-    },
-    
+    }
 ];
 
 function rentMe(model) {
     for(var i = 0; i < rentals.length; i++) {
         if(model == rentals[i].model && rentals[i].total > 0) {
-            rentals[i].total = rentals[i].total - 1;
-            console.log("yes" + rentals[i].total);
+          var x = rentals[i].total = rentals[i].total - 1;
+            console.log("Congratulations! You've rented the " + rentals[i].model +"." + " There are " + x + " available.");
         } else if(model == rentals[i].model && rentals[i].total === 0) {
             console.log("Sorry, the " + rentals[i].model + " is unavailable.");
-        } else if(model != rentals[i].model) {
-            console.log("error");
-        }
+        } 
     }
 }
 
-rentMe("sports car");
+rentMe("sedan");
 
-
-    
 // function availability() {
 //     for (var i = 0; i < rentals.length; i++ ) {
 //         if (rentals[i].total > 0) {
@@ -52,6 +47,8 @@ rentMe("sports car");
 //     }
 // }
 
+//availability();
+
 // function displayPrice() {
 //     for (var i = 0; i < rentals.length; i++) {
 //         if(rentals[i].total > 0) {
@@ -60,8 +57,6 @@ rentMe("sports car");
 //     }
 // }
 
-
-//availability();
 //displayPrice();
 
 
