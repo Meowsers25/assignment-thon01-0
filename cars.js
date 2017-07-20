@@ -27,17 +27,19 @@ var rentals = [
 
 function rentMe(model) {
     for(var i = 0; i < rentals.length; i++) {
-        if(model === rentals[i].model && rentals[i].total > 0) {
+        if(model == rentals[i].model && rentals[i].total > 0) {
             rentals[i].total = rentals[i].total - 1;
             console.log("yes" + rentals[i].total);
-        } else {
-            console.log("x");
+        } else if(model == rentals[i].model && rentals[i].total === 0) {
+            console.log("Sorry, the " + rentals[i].model + " is unavailable.");
+        } else if(model != rentals[i].model) {
+            console.log("error");
         }
     }
 }
 
 rentMe("sports car");
-console.log()
+
 
     
 // function availability() {
